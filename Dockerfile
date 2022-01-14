@@ -1,6 +1,6 @@
 # ref: https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker
 
-FROM node:16-slim
+FROM node:17-slim
 
 LABEL maintainer "Shingo Sato <shinsugar@gmail.com>"
 

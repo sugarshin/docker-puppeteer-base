@@ -13,10 +13,4 @@ RUN apt-get update \
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
-RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-  && mkdir -p /home/pptruser/Downloads \
-  && chown -R pptruser:pptruser /home/pptruser
-
-USER pptruser
-
 CMD ["google-chrome-stable"]

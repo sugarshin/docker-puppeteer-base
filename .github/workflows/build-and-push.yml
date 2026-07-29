@@ -16,11 +16,11 @@ jobs:
       IMAGE_NAME: puppeteer-base
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6
         with:
           images: |
             ${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Build and Push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}

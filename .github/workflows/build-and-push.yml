@@ -16,7 +16,7 @@ jobs:
       IMAGE_NAME: puppeteer-base
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Docker meta
         id: meta
@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Build and Push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
